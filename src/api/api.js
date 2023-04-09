@@ -9,11 +9,11 @@ export class API {
         let data = []
         if (query) {
             query = encodeQuery(query)
-            data = await axios.get(`http://localhost:3001/api/${name}?${query}`)
-            // data = await axios.get(`http://18.218.99.109/api/${name}?${query}`)
+            // data = await axios.get(`http://localhost:3001/api/${name}?${query}`)
+            data = await axios.get(`http://54.206.204.237/api/${name}?${query}`)
         } else {
-            data = await axios.get(`http://localhost:3001/api/${name}`)
-            // data = await axios.get(`http://18.218.99.109/api/${name}`)
+            // data = await axios.get(`http://localhost:3001/api/${name}`)
+            data = await axios.get(`http://54.206.204.237/api/${name}`)
         }
         // console.log(data)
         return data.data
@@ -22,8 +22,8 @@ export class API {
         let name = this.name
         let data = []
         query = encodeQuery(query)
-        data = await axios.get(`http://localhost:3001/api/${name}?${query}`)
-        // data = await axios.get(`http://18.218.99.109/api/${name}?${query}`)
+        // data = await axios.get(`http://localhost:3001/api/${name}?${query}`)
+        data = await axios.get(`http://54.206.204.237/api/${name}?${query}`)
         return data.data
     }
     async update (data) {
@@ -36,8 +36,8 @@ export class API {
             }
         }
         let name = this.name
-        let re = await axios.put(`http://localhost:3001/api/${name}`, data, config)
-        // let re = await axios.post(`http://18.218.99.109/api/${name}`, data, config)
+        // let re = await axios.put(`http://localhost:3001/api/${name}`, data, config)
+        let re = await axios.post(`http://54.206.204.237/api/${name}`, data, config)
         return re.data
     }
     async create (data) {
@@ -49,8 +49,8 @@ export class API {
             }
         }
         let name = this.name
-        let re = await axios.post(`http://localhost:3001/api/${name}`, data, config)
-        // let re = await axios.put(`http://18.218.99.109/api/${name}`, data, config)
+        // let re = await axios.post(`http://localhost:3001/api/${name}`, data, config)
+        let re = await axios.put(`http://54.206.204.237/api/${name}`, data, config)
         return re.data
     }
     async delete (query) {
@@ -63,8 +63,8 @@ export class API {
             }
         }
         query = encodeQuery(query)
-        let re = await axios.delete(`http://localhost:3001/api/${name}?${query}`, config)
-        // let re = await axios.delete(`http://18.218.99.109/api/${name}?${query}`, config)
+        // let re = await axios.delete(`http://localhost:3001/api/${name}?${query}`, config)
+        let re = await axios.delete(`http://54.206.204.237/api/${name}?${query}`, config)
         return re.data
     }
     async uploadFile (data) {
