@@ -1,7 +1,7 @@
 // import { createAction } from '@reduxjs/toolkit'
 import {API} from '../../api/api'
 import { updateMenu, updateFilteredMenu, updateMenuItem, updateIngredients, updateCategories } from './reducer'
-import { showToast } from '../Home/action'
+import { showToast } from '../home/action'
 const { v4: uuidv4 } = require('uuid')
 const menuAPI = new API('menuitem')
 const ingredientAPI = new API('ingredient')

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getMenuItems } from '../../store/menu/action'
-import { Carousel } from '../../components/carousel';
+import { Carousel } from '../../components/Carousel';
 import MenuCardList from './MenuCardList'
 import MenuFilter from './MenuFilter';
 

@@ -3,7 +3,7 @@ import React,{Component} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import 'react-tabs/style/react-tabs.css';
 import { getMenuItems, getIngredients, getCategories, editIngredient, createIngredient, deleteMenuItemById, deleteIngredientById } from '../../store/menu/action'
 import './admin.css'
 // import { adminSignOut } from '../../Store/User/action'

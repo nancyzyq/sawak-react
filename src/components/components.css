@@ -11,7 +11,7 @@
 }
 .slide_container {
     width: 100%;
-    height: calc(100vw * 0.5);
+    height: calc(100vw * 0.4);
     position: relative;
     overflow: hidden;
     /* top: 56px; */

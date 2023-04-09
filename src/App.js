@@ -6,14 +6,14 @@ import {
 } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
-import Home from './view/Home'
-import Menu from './view/Menu'
-import Contact from './view/Contact'
-import Login from './view/Admin/Login'
-import MenuItem from './view/Admin/MenuItem'
-import MenuItemAdd from './view/Admin/MenuItemAdd'
-import MenuItemEdit from './view/Admin/MenuItemEdit'
-import Ingredient from './view/Admin/Ingredient'
+import Home from './view/home'
+import Menu from './view/menu'
+import Contact from './view/contact'
+import Login from './view/admin/Login'
+import MenuItem from './view/admin/MenuItem'
+import MenuItemAdd from './view/admin/MenuItemAdd'
+import MenuItemEdit from './view/admin/MenuItemEdit'
+import Ingredient from './view/admin/Ingredient'
 import {isAdmin} from './utility/utility'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
