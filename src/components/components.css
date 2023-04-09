@@ -1,0 +1,216 @@
+.toastBox {
+    position: fixed;
+    bottom: 0px;
+    left: calc(50% - 120px);
+    width: 240px;
+    min-height: 72px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    z-index: 200;
+}
+.slide_container {
+    width: 100%;
+    height: calc(100vw * 0.5);
+    position: relative;
+    overflow: hidden;
+    /* top: 56px; */
+}
+#slide {
+    width: max-content;
+}
+.item {
+    width: 180px;
+    height: 270px;
+    background-position: 50% 50%;
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    margin-top: -135px;
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+}
+.item:nth-child(1), .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    border-radius: 0;
+    box-shadow: none;
+
+}
+.item:nth-child(3) {
+    left: 65%;
+}
+.item:nth-child(4) {
+    left: calc(65% + 200px);
+}
+.item:nth-child(5) {
+    left: calc(65% + 400px);
+}
+.item:nth-child(6) {
+    left: calc(65% + 600px);
+    opacity: 0;
+}
+
+.buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 36px;
+    text-align: center;
+}
+.s_button {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    margin: 0 32px;
+    cursor: pointer;
+}
+.slide_content {
+    color: white;
+    position: absolute;
+    margin-top: 15%;
+    width: 30%;
+    margin-left: 5rem;
+}
+.item:nth-child(1) .slide_content,
+.item:nth-child(3) .slide_content,
+.item:nth-child(4) .slide_content,
+.item:nth-child(5) .slide_content,
+.item:nth-child(6) .slide_content{
+    display: none;
+}
+.slide_text {
+    opacity: 0;
+    padding-top: 8px;
+    font-size: 1rem;
+    animation: slideContent 1s ease-in-out 1 forwards;
+}
+.slide_title {
+    opacity: 0;
+    animation: slideContent 1s ease-in-out 1 forwards;
+}
+
+@keyframes slideContent {
+  from {
+      opacity: 0;
+      /* transform: translateY(100px); */
+      filter: blur(10px);
+    }
+  to {
+      opacity: 1;
+      /* transform: translateY(0); */
+      filter: blur(0);
+    }
+}
+
+@media screen and (max-width: 1200px) { 
+    .item {
+        width: 160px;
+        height: 240px;
+        margin-top: -120px;
+    }
+    .item:nth-child(4) {
+        left: calc(65% + 180px);
+    }
+    .item:nth-child(5) {
+        left: calc(65% + 360px);
+    }
+    .item:nth-child(6) {
+        left: calc(65% + 540px);
+    }
+    
+}
+
+@media screen and (max-width: 1023px){ 
+    .item {
+        width: 120px;
+        height: 180px;
+        margin-top: -100px;
+    }
+    .item:nth-child(4) {
+        left: calc(65% + 130px);
+    }
+    .item:nth-child(5) {
+        left: calc(65% + 260px);
+    }
+    .item:nth-child(6) {
+        left: calc(65% + 390px);
+    }
+    .slide_content {
+        margin-left: 4rem;
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 767px){ 
+    .slide_container {
+        height: calc(100vw * 0.6);
+    }
+    .item {
+        width: 90px;
+        height: 130px;
+        margin-top: -75px;
+    }
+    .item:nth-child(3) {
+        left: 60%;
+    }
+
+    .item:nth-child(4) {
+        left: calc(60% + 100px);
+    }
+    .item:nth-child(5) {
+        left: calc(60% + 200px);
+    }
+    .item:nth-child(6) {
+        left: calc(60% + 300px);
+        /* opacity: 0; */
+    }
+    .buttons {
+        bottom: 24px;
+    }
+    .slide_content {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 539px){ 
+    /* .slide_container {
+        height: 360px;
+    } */
+    /* .home {
+        margin-top: 420px;
+    } */
+    .item {
+        width: 75px;
+        height: 100px;
+        margin-top: -50px;
+    }
+    .item:nth-child(3) {
+        left: 60%;
+    }
+    .item:nth-child(4) {
+        left: calc(60% + 85px);
+    }
+    .item:nth-child(5) {
+        left: calc(60% + 170px);
+    }
+    .item:nth-child(6) {
+        left: calc(60% + 255px);
+        /* opacity: 0; */
+    }
+    .slide_content {
+        /* width: 50%; */
+        margin-left: 1rem;
+    }
+    .slide_text {
+        font-size: .75rem;
+    }
+}
+
