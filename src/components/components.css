@@ -65,7 +65,7 @@
     display: inline-block;
     height: 48px;
     width: 48px;
-    line-height: 36px;
+    line-height: 48px;
     text-align: center;
     color: #fff;
     margin: 0 32px;
@@ -151,7 +151,7 @@
 
 @media screen and (max-width: 767px){ 
     .slide_container {
-        height: calc(100vw * 0.5);
+        height: calc(100vw * 0.6);
     }
     .item {
         width: 90px;
@@ -172,11 +172,9 @@
         left: calc(60% + 300px);
         /* opacity: 0; */
     }
-    .buttons {
-        bottom: 24px;
-    }
     .slide_content {
         margin-left: 2rem;
+        margin-top: 10%;
     }
 }
 
@@ -207,10 +205,19 @@
     }
     .slide_content {
         /* width: 50%; */
+        margin-top: 10%;
         margin-left: 1rem;
     }
     .slide_text {
         font-size: .75rem;
+    }
+    .buttons {
+        bottom: 24px;
+    }
+    .s_button {
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
     }
 }
 

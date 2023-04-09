@@ -31,7 +31,8 @@
     height: 15rem;
     position: relative;
     /* background-image: url("https://tides.today/imageproxy/jpg/996491f7-ee74-45d6-854d-43a91fd2cba2_IMG_20190204_140025?auto=compress,format&rect=0,0,1200,900&w=1024&h=768"); */
-    background-image: url("http://localhost:3000/img/food3.jpg");
+    /* background-image: url("http://localhost:3000/img/food3.jpg"); */
+    background-image: url("http://54.206.204.237/img/food3.jpg");
     content: '';
     width: 100%;
     background-size: cover;
