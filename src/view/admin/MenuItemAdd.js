@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import AdminNav from '../../components/AdminNav'
 import { getIngredients, getCategories, createMenuItem } from '../../store/menu/action'
 
 class MenuItemAdd extends Component {
@@ -27,18 +28,13 @@ class MenuItemAdd extends Component {
 		this.handlePriceChange = this.handlePriceChange.bind(this)
 		this.handleImageChange = this.handleImageChange.bind(this)
 		this.cancel = this.cancel.bind(this)
-		// this.handleActiveChange = this.handleActiveChange.bind(this)
     }
     static propTypes = {
-		// menuItemToEdit: PropTypes.object.isRequired,
-		// getMenuToEdit: PropTypes.func.isRequired,
 		getIngredients: PropTypes.func.isRequired,
 		ingredients: PropTypes.array.isRequired,
 		getCategories: PropTypes.func.isRequired,
 		categories: PropTypes.array.isRequired,
 		createMenuItem: PropTypes.func.isRequired
-		// toastMes:PropTypes.string.isRequired,
-		// toastShow:PropTypes.bool.isRequired
 	}
 
 	handleNameChange (event) {
@@ -50,10 +46,6 @@ class MenuItemAdd extends Component {
 		this.setState({type: type1})
 	}
 
-	// handleActiveChange (event) {
-	// 	this.setState({active: event.target.checked})
-	// }
-
 	handleNumberChange (event) {
     	this.setState({number: event.target.value})
 	}
@@ -63,7 +55,6 @@ class MenuItemAdd extends Component {
 	}
 
 	handleImageChange (event) {
-		// console.log(event.target.files[0])
 		this.setState({imageToUpload: event.target.files[0]})
 	}
 
@@ -71,7 +62,6 @@ class MenuItemAdd extends Component {
 		let name = event.target.name
 		let checked = event.target.checked
 		let ingredientList = this.state.ingredientList
-		// let ingredients = []
 		ingredientList.map((i) => {
 			if (i.text === name) i.selected = checked
 		})
@@ -84,7 +74,6 @@ class MenuItemAdd extends Component {
 			id: this.state.id,
 			name: this.state.name,
 			type: this.state.type._id,
-			// active: this.state.active,
 			price: this.state.price,
 			number: this.state.number,
 			// image: this.state.image,
@@ -107,7 +96,6 @@ class MenuItemAdd extends Component {
 		this.props.getCategories()
 		setTimeout(() => {
 			let ingredients = []
-			// console.log(this.props.menuItemToEdit)
 			this.props.ingredients.map((i) =>{
 				let ingredient = {
 					text: i.name,
@@ -126,6 +114,8 @@ class MenuItemAdd extends Component {
 
     render () {
         return (
+			<div>
+			<AdminNav />
             <div className="dashboardContainer">
 				<div>
                 	<h2 className="mt-4 mb-4 text-center">Add Menu Item</h2>
@@ -244,8 +234,8 @@ class MenuItemAdd extends Component {
 						</div>
 						<input type="submit" value="Save" />
 				</form> */}
-				{/* <Toast mes={this.props.toastMes} show={this.props.toastShow} /> */}
             </div>
+			</div>
         )
     }
 }

@@ -1,15 +1,13 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import AdminNav from '../../components/AdminNav'
 import { withRouterParams } from '../../utility/utility'
 import { getMenuItem, getIngredients, getCategories, editMenuItem } from '../../store/menu/action'
 
 class MenuItemEdit extends Component {
 	constructor(props) {
 		super(props)
-		// if (!isAdminLoggedIn()) {
-		// 	window.location.href = '/login'
-		// }
 		this.state = {
 			name: '',
 			type: '',
@@ -30,8 +28,6 @@ class MenuItemEdit extends Component {
 		this.handleIngredientChange = this.handleIngredientChange.bind(this)
 		this.handlePriceChange = this.handlePriceChange.bind(this)
 		this.cancel = this.cancel.bind(this)
-		// this.handleImageChange = this.handleImageChange.bind(this)
-		// this.handleActiveChange = this.handleActiveChange.bind(this)
 	}
 
 	static propTypes = {
@@ -41,9 +37,7 @@ class MenuItemEdit extends Component {
 		ingredients: PropTypes.array.isRequired,
 		getCategories: PropTypes.func.isRequired,
 		categories: PropTypes.array.isRequired,
-		editMenuItem: PropTypes.func.isRequired,
-		// toastMes:PropTypes.string.isRequired,
-		// toastShow:PropTypes.bool.isRequired
+		editMenuItem: PropTypes.func.isRequired
 	}
 	handleNameChange (event) {
     	this.setState({name: event.target.value})
@@ -53,10 +47,6 @@ class MenuItemEdit extends Component {
 		let type1 = this.state.categories.find(i => i.name === event.target.value)
 		this.setState({type: type1})
 	}
-
-	// handleActiveChange (event) {
-	// 	this.setState({active: event.target.checked})
-	// }
 
 	handleNumberChange (event) {
     	this.setState({number: event.target.value})
@@ -88,7 +78,6 @@ class MenuItemEdit extends Component {
 			id: this.state.id,
 			name: this.state.name,
 			type: this.state.type._id,
-			// active: this.state.active,
 			number: this.state.number,
 			price: this.state.price,
 			// image: this.state.image,
@@ -116,28 +105,19 @@ class MenuItemEdit extends Component {
 
 	componentDidMount () {
 		let id = this.props.params.id
-		// let { id } = useParams();
-		// console.log(this.props.params)
-		// console.log(window.location)
-		// console.log(window.location.search)
 		this.props.getMenuItem(id)
 		this.props.getIngredients()
 		this.props.getCategories()
 		setTimeout(() => {
-			// console.log(this.props.menuItem)
 			this.setState({ 
 				name: this.props.menuItem.name,
 				id: this.props.menuItem.id,
 				type: this.props.menuItem.type,
-				// active: this.props.menuItem.active,
 				categories: this.props.categories,
 				price: this.props.menuItem.price || '',
-				// image: this.props.menuItem.image || '',
 				number: this.props.menuItem.number || ''
 			})
-			// console.log(this.state.ingredients)
 			let ingredients = []
-			// console.log(this.props.menuItem)
 			this.props.ingredients.map((i) =>{
 				let ingredient = {
 					text: i.name,
@@ -157,16 +137,14 @@ class MenuItemEdit extends Component {
 				ingredients.push(ingredient)
 			})
 			this.setState({ingredientList: ingredients})
-			// console.log(this.state.ingredientList)
 		}, 2000)
   }
 
 	render() {
 		return (
+			<div>
+			<AdminNav />
 			<div className="dashboardContainer">
-				{/* <AdminTopBar /> */}
-				{/* <h2>Edit Food</h2> */}
-                {/* <DashNav/> */}
 				<div>
                 <h2 className="mt-4 mb-4 text-center">Edit Menu Item</h2>
 				<form className="row mt-5" onSubmit={this.handleSubmit}>
@@ -300,7 +278,7 @@ class MenuItemEdit extends Component {
 						<input type="submit" value="Save" />
 					</form> */}
 				</div>
-				{/* <Toast mes={this.props.toastMes} show={this.props.toastShow} /> */}
+			</div>
 			</div>
 		)
 	}

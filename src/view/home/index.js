@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-// import { Carousel } from '../../components/Carousel';
+import Nav from '../../components/Nav'
+import Footer from '../../components/Footer'
 import HomeCarousel from '../../components/HomeCarousel';
 import card1 from '../../static/img/card1.jpg'
 import card2 from '../../static/img/card2.jpg'
@@ -15,9 +16,10 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {/* <Carousel/> */}
+        <Nav />
         <HomeCarousel />
         <div className="container marketing mt-5 text-center ">
+          {/* small round img and text */}
           <div className="row">
             <div className="col-lg-4">
               <img className="rounded-circle" src={card5} style={{width: '160px', height: '160px', objectFit: 'cover'}}/>
@@ -37,7 +39,7 @@ class Home extends Component {
           </div>
 
           <hr className="my-5" />
-
+          {/* medium img and text  */}
           <div className="row ">
             <div className="col-md-7" style={{marginTop: '12rem'}}>
               <h2>Flavor of perfection</h2>
@@ -73,6 +75,7 @@ class Home extends Component {
           </div>
           <hr className="my-5" />
         </div>
+        <Footer />
       </div>
     )
   }

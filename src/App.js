@@ -15,8 +15,8 @@ import MenuItemAdd from './view/admin/MenuItemAdd'
 import MenuItemEdit from './view/admin/MenuItemEdit'
 import Ingredient from './view/admin/Ingredient'
 import {isAdmin} from './utility/utility'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
+// import Nav from './components/Nav'
+// import Footer from './components/Footer'
 import Toast from './components/Toast'
 import { useSelector } from 'react-redux'
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <div className="appContianer">
-        <Nav/>
+        {/* <Nav/> */}
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -40,7 +40,7 @@ function App() {
         </Router>
         
       </div>
-      { window.location.pathname.includes('/admin') ?  '' : <Footer/>}
+      {/* { window.location.pathname.includes('/admin') ?  '' : <Footer/>} */}
       <Toast mes={toastMes} show={toastShow} />
     </div>
   );

@@ -1,6 +1,5 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
-// import Select from 'react-select';
 import { connect } from 'react-redux'
 import { getMenuItemsByType } from '../../store/menu/action'
 
@@ -21,16 +20,11 @@ class MenuFilter extends Component {
 		getMenuItemsByType: PropTypes.func.isRequired
     }
     
+	// toggle selection of each type 
     handleChipClick (event) {
         let types = this.state.types
-        // console.log(types, event.currentTarget.textContent)
         types.map((i) => {
 			if (i.label === event.currentTarget.textContent) {
-                // if (i.class === 'typeChip') {
-                //     i.class = 'typeChipSelected'
-                // } else {
-                //     i.class = 'typeChip'
-                // }
                 i.class = i.class === 'typeChipUnselected' ? 'typeChipSelected' : 'typeChipUnselected'
             }
         })
@@ -51,10 +45,6 @@ class MenuFilter extends Component {
 		)
 	}
 }
-
-// const mapStateToProps = (state) => ({
-	// foodList: state.Food.menu
-// })
   
   const mapDispatchToProps = {
     getMenuItemsByType
