@@ -1,10 +1,13 @@
 import React from 'react'
-import banner1 from '../static/img/bn1.jpg'
-import banner2 from '../static/img/bn2.jpg'
-import banner3 from '../static/img/bn3.jpg'
+import banner1 from '../static/img/bn1_900.jpg'
+import banner2 from '../static/img/bn2_900.jpg'
+import banner3 from '../static/img/bn3_900.jpg'
+import bn1 from '../static/img/bn1_800.jpg'
+import bn2 from '../static/img/bn2_800.jpg'
+import bn3 from '../static/img/bn3_800.jpg'
 
 export const Carousel = () => (
-   <div id="carouselExampleCaptions" className="carousel slide mb-5" data-bs-ride="carousel">
+   <div id="carouselExampleCaptions" className="carousel slide mb-4" data-bs-ride="carousel">
         <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -12,21 +15,25 @@ export const Carousel = () => (
         </div>
         <div className="carousel-inner">
         <div className="carousel-item active">
-            <img src={banner3} className="d-block w-100" alt="..."/>
+            
+            <img src={bn3} className="d-none d-sm-block w-100" alt="..."/>
+            <img src={banner3} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
             <h2>Quod Lorem Eruditi</h2>
             <p>Doctus recusabo ex pro. Alterum impedit conclusionemque an vim.</p>
             </div>
         </div>
         <div className="carousel-item">
-            <img src={banner2} className="d-block w-100" alt="..."/>
+            <img src={bn2} className="d-none d-sm-block w-100" alt="..."/>
+            <img src={banner2} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
             <h2>Consulatu Vituperatoribus</h2>
             <p>Vitae affert et pri, mel in amet neglegentur. Erant commodo fastidii ea pro.</p>
             </div>
         </div>
         <div className="carousel-item">
-            <img src={banner1} className="d-block w-100" alt="..."/>
+            <img src={bn1} className="d-none d-sm-block w-100" alt="..."/>
+            <img src={banner1} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
             <h2>Euismod Docendi</h2>
             <p>Verterem persequeris concludaturque vim id, qui in malis tacimates platonem</p>

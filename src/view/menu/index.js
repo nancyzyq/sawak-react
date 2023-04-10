@@ -26,7 +26,7 @@ class Menu extends Component {
       <div>
         <Carousel/>
         <div className="container">
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h1>Menu</h1>
           </div>
           
