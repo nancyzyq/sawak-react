@@ -15,10 +15,10 @@ This website was built using the following technologies:
 
 ## Demo
 
-To view demo of this website, click [here](http://54.206.204.237).
-To login as admin, click [here](http://54.206.204.237/login),
-Username: admin
-Password: admin123
+To view demo of this website, click [here](http://54.206.204.237).  
+To login as admin, click [here](http://54.206.204.237/login)  _
+Username: admin  
+Password: admin123  
 
 ## License
 This project is licensed under the MIT License.
