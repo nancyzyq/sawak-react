@@ -19,7 +19,7 @@ export const Carousel = () => (
             <img src={bn3} className="d-none d-sm-block w-100" alt="..."/>
             <img src={banner3} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
-            <h2>Quod Lorem Eruditi</h2>
+            <h2>Satisfy Your Cravings</h2>
             <p>Doctus recusabo ex pro. Alterum impedit conclusionemque an vim.</p>
             </div>
         </div>
@@ -27,7 +27,7 @@ export const Carousel = () => (
             <img src={bn2} className="d-none d-sm-block w-100" alt="..."/>
             <img src={banner2} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
-            <h2>Consulatu Vituperatoribus</h2>
+            <h2>Food for the Soul</h2>
             <p>Vitae affert et pri, mel in amet neglegentur. Erant commodo fastidii ea pro.</p>
             </div>
         </div>
@@ -35,7 +35,7 @@ export const Carousel = () => (
             <img src={bn1} className="d-none d-sm-block w-100" alt="..."/>
             <img src={banner1} className="d-xs-block d-sm-none w-100" alt="..."/>
             <div className="carousel-caption d-none d-md-block text-end">
-            <h2>Euismod Docendi</h2>
+            <h2>Simply Delicious</h2>
             <p>Verterem persequeris concludaturque vim id, qui in malis tacimates platonem</p>
             </div>
         </div>

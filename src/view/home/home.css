@@ -1,0 +1,17 @@
+.smallRoundImg {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+
+}
+
+.mediumCardText {
+    margin-top: 11rem;
+}
+
+@media  screen and (max-width: 768px) {
+    .mediumCardText {
+        margin-top: 1rem;
+    }
+    
+}

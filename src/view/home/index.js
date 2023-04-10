@@ -8,6 +8,7 @@ import card3 from '../../static/img/card3.jpg'
 import card4 from '../../static/img/card4.jpg'
 import card5 from '../../static/img/card5.jpg'
 import card6 from '../../static/img/card6.jpg'
+import './home.css'
 
 class Home extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Home extends Component {
           <hr className="my-5" />
           {/* medium img and text  */}
           <div className="row ">
-            <div className="col-md-7" style={{marginTop: '12rem'}}>
+            <div className="col-md-7 mediumCardText">
               <h2>Flavor of perfection</h2>
               <p className="lead">Ne eam viderer ceteros necessitatibus. Audire aliquip ex est, no est mucius sensibus. Eos te fastidii reformidans philosophia, primis interesset et vix, errem tollit delenit cu eam.</p>
             </div>
@@ -53,11 +54,11 @@ class Home extends Component {
           <hr className="my-5" />
 
           <div className="row">
-            <div className="col-md-7 order-md-2" style={{marginTop: '12rem'}}>
+            <div className="col-md-7 mediumCardText">
               <h2 >Passion Meets Plate</h2>
               <p className="lead">Nam no quis nonumy ancillae, vim te dico torquatos. Pri in labore perfecto lobortis, mel ut invidunt vituperata. Id vocent oblique est, assum constituto per ad.Te nec labore tamquam eligendi.</p>
             </div>
-            <div className="col-md-5 order-md-1">
+            <div className="col-md-5">
               <img className="img-fluid mx-auto" src={card3} data-holder-rendered="true" style={{width: '500px', height: '500px', objectFit: 'cover'}}/>
             </div>
           </div>
@@ -65,7 +66,7 @@ class Home extends Component {
           <hr className="my-5" />
 
           <div className="row">
-            <div className="col-md-7" style={{marginTop: '12rem'}}>
+            <div className="col-md-7 mediumCardText">
               <h2 >Unleash Your Taste Buds</h2>
               <p className="lead"> Rebum torquatos ea his, his dicunt vivendo te. Id duo convenire forensibus, pro at tation appetere posidonium. Qui ut molestiae quaerendum scribentur, cum purto scripta persius id. Eum unum theophrastus ea, ei eum percipitur intellegam.</p>
             </div>

@@ -39,13 +39,13 @@ class HomeCarousel extends Component {
                             <div className="slide_text">We offer exceptional dining experiences with a menu of expertly prepared dishes using highest quality ingredients.</div>
                         </div>
                     </div>
-                    <div className="item" style={{backgroundImage: `url(${bn2})`}}>
+                    <div className="item" style={{backgroundImage: `url(${bn3})`}}>
                         <div className="slide_content">
                             <h3 className="slide_title">Sawak Restaurant</h3>
                             <div className="slide_text">We offer exceptional dining experiences with a menu of expertly prepared dishes using highest quality ingredients.</div>
                         </div>
                     </div>
-                    <div className="item" style={{backgroundImage: `url(${bn3})`}}>
+                    <div className="item" style={{backgroundImage: `url(${bn2})`}}>
                         <div className="slide_content">
                             <h3 className="slide_title">Sawak Restaurant</h3>
                             <div className="slide_text">We offer exceptional dining experiences with a menu of expertly prepared dishes using highest quality ingredients.</div>
