@@ -16,7 +16,7 @@ export const MenuCard = (props) => {
                 <div className="menuCardImage">
                 </div>
                 <div className="menuCardDetail">
-                <h4 className="menuCardTitle">{props.item.name}</h4>
+                <h5 className="menuCardTitle">{props.item.name}</h5>
                 <p><span>${props.item.price}</span></p>
                 <p className="summary">
                     <strong>Ingredients: </strong>{props.item.ingredients}</p>

@@ -45,7 +45,7 @@ class MenuItem extends Component {
 					<hr/>
 					{/* menu item table */}
 					<div >
-						<div className="mb-4">
+						<div className="mb-4 adminTableContainer">
 							<table>
 								<thead>
 									<tr>
